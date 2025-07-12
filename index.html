@@ -1519,61 +1519,135 @@
         function botReply(userMessage) {
             userMessage = userMessage.toLowerCase();
 
-            // Name
-            if (userMessage.includes("who made you") || userMessage.includes("who created you") || userMessage.includes("your creator") || userMessage.includes("who is prabhav"))
-                return "My creator is Prabhav Sharma, a talented data scientist and web developer.";
+            // --- General HR & Portfolio Questions ---
+            if (userMessage.includes("who are you") || userMessage.includes("what are you"))
+                return "I am ChattyBot, an AI assistant designed to help you explore Prabhav Sharma's data science portfolio. Feel free to ask me anything about his skills, projects, or experience!";
+            
+            if (userMessage.includes("who is prabhav") || userMessage.includes("tell me about prabhav") || userMessage.includes("about yourself"))
+                return "Prabhav is a passionate and dedicated Data Science student, currently seeking data science or data analytics internships. He excels at uncovering insights from data and applying machine learning techniques to solve real-world problems.";
 
-            // Age
-            if (userMessage.includes("age") || userMessage.includes("how old") || userMessage.includes("birth year") || userMessage.includes("when was prabhav born"))
-                return "Prabhav is 20 years old.";
+            if (userMessage.includes("why data science") || userMessage.includes("interest in data science"))
+                return "Prabhav's data science journey began with a deep curiosity about how data can be used to make informed decisions and drive innovation. He's passionate about turning data into breakthroughs.";
 
-            // Skills
-            if (userMessage.includes("skills") || userMessage.includes("expertise") || userMessage.includes("what can prabhav do") || userMessage.includes("about") || userMessage.includes("what is prabhav good at"))
-                return "Prabhav is skilled in Data Science, Machine Learning, Deep Learning, Neural Networks, NLP, and Web Development.";
+            if (userMessage.includes("what kind of role") || userMessage.includes("looking for") || userMessage.includes("job search"))
+                return "Prabhav is actively seeking data science or data analytics internship opportunities, particularly in Noida or Delhi.";
 
-            // Hobbies & Interests
-            if (userMessage.includes("hobbies") || userMessage.includes("likes to do") || userMessage.includes("what does prabhav enjoy") || userMessage.includes("passion"))
-                return "Prabhav enjoys meeting new people, learning about different cultures, exploring AI applications, and working on innovative projects.";
-
-            // Projects
-            if (userMessage.includes("projects") || userMessage.includes("what has prabhav built") || userMessage.includes("past work") || userMessage.includes("what has prabhav worked on"))
-                return "Prabhav has worked on AI-powered educational platforms for the deaf, warehouse clustering models, image text extraction, and website development.";
-
-            // Education
-            if (userMessage.includes("education") || userMessage.includes("college") || userMessage.includes("what is prabhav studying") || userMessage.includes("degree"))
-                return "Prabhav is a college student currently pursuing a career in Data Science.";
-
-            // Internships & Work
-            if (userMessage.includes("internship") || userMessage.includes("is prabhav working") || userMessage.includes("work experience") || userMessage.includes("job"))
-                return "Prabhav is currently seeking a data science or data analytics internship in Noida or Delhi.";
-
-            // Websites & Online Presence
-            if (userMessage.includes("website") || userMessage.includes("portfolio") || userMessage.includes("does prabhav have a website") || userMessage.includes("online projects"))
-                return "Prabhav is building multiple websites, including a portfolio and AI-powered learning platforms.";
-
-            // Goals & Future Plans
-            if (userMessage.includes("goal") || userMessage.includes("future plans") || userMessage.includes("career path") || userMessage.includes("what does prabhav want to do"))
+            if (userMessage.includes("career aspirations") || userMessage.includes("future plans") || userMessage.includes("long term goals"))
                 return "Prabhav aims to become a leading data scientist and AI developer, working on impactful projects that benefit society.";
 
-            // Personal Life
-            if (userMessage.includes("where does prabhav live") || userMessage.includes("hometown") || userMessage.includes("prabhav's location"))
-                return "Prabhav is from Rajasthan, India.";
+            if (userMessage.includes("strengths"))
+                return "Prabhav's strengths include strong analytical skills, proficiency in various data science tools, expertise in machine learning and NLP, and a dedication to continuous learning and problem-solving.";
 
-            // Favorite Technologies
-            if (userMessage.includes("favorite tech") || userMessage.includes("which tools does prabhav use") || userMessage.includes("tech stack"))
-                return "Prabhav loves working with Python, TensorFlow, OpenCV, Pandas, and React.js.";
+            if (userMessage.includes("weaknesses") || userMessage.includes("areas for improvement"))
+                return "While I cannot disclose personal weaknesses, Prabhav is committed to continuous learning and always seeks to improve his skills and knowledge in the ever-evolving field of data science.";
 
-            // Favorite Food
-            if (userMessage.includes("favorite food") || userMessage.includes("does prabhav like food") || userMessage.includes("what does prabhav eat"))
-                return "Prabhav enjoys Indian cuisine, especially Rajma Chawal and Paneer Butter Masala.";
+            if (userMessage.includes("handle challenges") || userMessage.includes("overcome obstacles") || userMessage.includes("faced a problem"))
+                return "Prabhav approaches challenges by breaking them down, researching solutions, and applying a systematic approach. His projects demonstrate his ability to tackle complex problems, like developing an NL to Data Insight Agent or a Predictive Maintenance Model.";
 
-            // Fun Facts
-            if (userMessage.includes("fun fact") || userMessage.includes("tell me something cool") || userMessage.includes("interesting about prabhav"))
-                return "Fun fact: Prabhav has built a 3D animated character to translate subtitles into hand signs using AI! 🚀";
+            if (userMessage.includes("stay updated") || userMessage.includes("learn new technologies") || userMessage.includes("continuous learning"))
+                return "Prabhav stays updated by actively working on projects, completing advanced courses, and engaging with the data science community, often leveraging platforms like Google Colab for collaborative development.";
 
-            // Casual Conversation
+            if (userMessage.includes("availability for interview") || userMessage.includes("when is prabhav available"))
+                return "For interview availability, please reach out to Prabhav directly via email at prabhavs2004@gmail.com or connect on LinkedIn.";
+
+            if (userMessage.includes("how did you build this website") || userMessage.includes("technologies for portfolio"))
+                return "Prabhav built this portfolio website using modern web technologies: HTML5 for structure, CSS3 for styling (with custom variables for a galactic theme), and JavaScript for interactivity, including the 3D background particles and this chatbot!";
+
+            if (userMessage.includes("is this portfolio responsive"))
+                return "Yes, this portfolio is designed to be fully responsive, providing an excellent user experience across various devices including desktops, tablets, and mobile phones.";
+
+            // --- Education & Experience ---
+            if (userMessage.includes("education") || userMessage.includes("college") || userMessage.includes("studying"))
+                return "Prabhav is pursuing a Bachelor of Technology in Computer Science and Engineering, expected to graduate in 2026. He also graduated from Gyan Mandir Public School in 2022.";
+
+            if (userMessage.includes("internship") || userMessage.includes("work experience"))
+                return "Prabhav worked as a Data Analyst Intern at Bharti Airtel in 2024, where he developed a Natural Language to Data Insight Agent. This significantly enhanced data accessibility and decision-making for users.";
+
+            if (userMessage.includes("bharti airtel internship") || userMessage.includes("data analyst intern airtel"))
+                return "During his Data Analyst Internship at Bharti Airtel in 2024, Prabhav developed a Natural Language to Data Insight Agent. This project allowed users to query data using natural language, making data exploration and decision-making much more intuitive.";
+
+            // --- Technical Skills ---
+            if (userMessage.includes("python skills") || userMessage.includes("python expertise"))
+                return "Prabhav is highly proficient in Python, including libraries like NumPy, Pandas, Matplotlib, Seaborn, scikit-learn, Streamlit, OpenCV, and BeautifulSoup.";
+
+            if (userMessage.includes("sql skills") || userMessage.includes("database experience"))
+                return "Prabhav has strong SQL skills, essential for data analysis and manipulation from databases.";
+
+            if (userMessage.includes("machine learning experience") || userMessage.includes("ml projects"))
+                return "Prabhav has extensive experience in Machine Learning, including model building, deployment, and working with both supervised and unsupervised learning techniques. Check out his 'Predictive Analytics' and 'Customer Churn Prediction' projects!";
+
+            if (userMessage.includes("deep learning") || userMessage.includes("neural networks"))
+                return "Prabhav has a solid understanding of Deep Learning concepts and neural networks, which he applies in projects like 'Pose Detection and Tracking' and 'Hand Landmarks Tracking'.";
+
+            if (userMessage.includes("nlp experience") || userMessage.includes("natural language processing"))
+                return "Prabhav's NLP skills include text analysis and agent development. His 'NL to Data Insights Automated System' is a prime example of his NLP capabilities.";
+
+            if (userMessage.includes("data visualization") || userMessage.includes("power bi") || userMessage.includes("excel for data"))
+                return "Prabhav is skilled in data analysis and visualization using Power BI and Advanced Excel, enabling him to present complex data in meaningful and actionable ways.";
+
+            if (userMessage.includes("web scraping") || userMessage.includes("beautifulsoup") || userMessage.includes("scrapy"))
+                return "Prabhav has experience with Web Scraping using Python libraries like BeautifulSoup and Scrapy, as demonstrated in his 'IPL Web Scraping' project.";
+
+            if (userMessage.includes("selenium"))
+                return "Prabhav uses Selenium for automated testing and browser automation, enhancing efficiency in data collection and web interaction tasks.";
+
+            if (userMessage.includes("google colab") || userMessage.includes("cloud platforms"))
+                return "Prabhav leverages Google Colab for collaborative development, allowing him to work seamlessly on projects and share his work effectively.";
+
+            // --- Project Specifics ---
+            if (userMessage.includes("nl to data insights") || userMessage.includes("natural language agent"))
+                return "The 'NL to Data Insights Automated System' is a highlight where Prabhav developed an AI agent allowing users to query data using natural language, making data exploration highly intuitive and efficient. It uses advanced NLP.";
+
+            if (userMessage.includes("predictive analytics project") || userMessage.includes("forecasting project"))
+                return "In the 'Predictive Analytics with Machine Learning' project, Prabhav designed and implemented a solution to forecast key business metrics using various ML algorithms, providing actionable insights for strategic decisions.";
+
+            if (userMessage.includes("intelligent agent for data automation"))
+                return "Prabhav created an 'Intelligent Agent for Data Automation' to automate repetitive data tasks like collection, cleaning, and report generation, leveraging AI to learn and adapt for improved efficiency.";
+
+            if (userMessage.includes("live background changer"))
+                return "The 'Live Background Changer' is a web development project where Prabhav used JavaScript and CSS to allow users to dynamically change webpage backgrounds with color pickers, gradients, and image uploads.";
+
+            if (userMessage.includes("pose detection") || userMessage.includes("human pose tracking"))
+                return "The 'Pose Detection and Tracking' project involves using computer vision and machine learning (TensorFlow, OpenCV) to identify key points on the human body and track movements in real-time.";
+
+            if (userMessage.includes("mall clustering project") || userMessage.includes("customer segmentation mall"))
+                return "In the 'Mall Clustering Project', Prabhav segmented mall customers based on purchasing behavior using K-means clustering (Python, Pandas, scikit-learn, Matplotlib) to help management tailor marketing strategies.";
+
+            if (userMessage.includes("hand landmarks tracking"))
+                return "The 'Hand Landmarks Tracking' project focuses on tracking hand landmarks using advanced computer vision and ML models (TensorFlow, OpenCV, JavaScript) to enhance gesture recognition.";
+
+            if (userMessage.includes("covid analysis project"))
+                return "The 'Covid Analysis' project involved analyzing the impact of COVID-19 using data visualization techniques (Python, Pandas, Matplotlib) to provide insights into the pandemic's spread and effects.";
+
+            if (userMessage.includes("customer analytics project"))
+                return "In the 'Customer Analytics' project, Prabhav analyzed customer data using data mining and machine learning (Python, Pandas, scikit-learn, Tableau) to segment customers, predict churn, and identify trends.";
+
+            if (userMessage.includes("ipl web scraping project"))
+                return "The 'IPL Web Scraping' project involved scraping IPL website data using Python and BeautifulSoup to gather statistics and insights, providing detailed reports and visualizations of matches and player performances.";
+
+            if (userMessage.includes("loan approval web app"))
+                return "The 'Loan Approval Web App' is a web application (Python, Flask, scikit-learn) designed to automate loan approval by predicting eligibility based on applicant data, offering a user-friendly interface.";
+
+            if (userMessage.includes("employee productivity analysis"))
+                return "The 'Employee Productivity Analysis' project focused on analyzing employee productivity using various metrics and data visualization (Python, Pandas, Matplotlib) to provide insights into performance trends.";
+
+            if (userMessage.includes("data visualization dashboard project"))
+                return "Prabhav developed an interactive 'Data Visualization Dashboard' using Power BI to visualize sales data, featuring dynamic filters, drill-down capabilities, and custom visualizations for data-driven decisions.";
+
+            if (userMessage.includes("predictive maintenance model project"))
+                return "In the 'Predictive Maintenance Model' project, Prabhav built a machine learning model to predict equipment failures in a manufacturing plant, using Python with scikit-learn and Pandas to reduce downtime and costs.";
+
+            if (userMessage.includes("customer churn prediction project"))
+                return "Prabhav implemented a 'Customer Churn Prediction' system for a telecom company using classification algorithms, identifying at-risk customers for proactive retention measures (Python, Pandas, ML libraries).";
+
+
+            // --- Contact Information ---
+            if (userMessage.includes("contact") || userMessage.includes("phone") || userMessage.includes("email") || userMessage.includes("linkedin") || userMessage.includes("instagram"))
+                return "You can connect with Prabhav via phone at 7303025805, email at prabhavs2004@gmail.com, LinkedIn (search 'Prabhav Sharma'), or Instagram (@prabhavsharma04).";
+
+            // --- Casual Conversation ---
             if (userMessage.includes("hi") || userMessage.includes("hello") || userMessage.includes("hey"))
-                return "Hey there! How can I help you today? 😊";
+                return "Hey there! How can I help you today? Feel free to ask about Prabhav's portfolio.";
 
             if (userMessage.includes("how are you") || userMessage.includes("how’s it going"))
                 return "I'm just a chatbot, but thanks for asking! I'm always here to help. How about you?";
@@ -1590,7 +1664,8 @@
             if (userMessage.includes("goodbye") || userMessage.includes("bye"))
                 return "Goodbye! Have a great day ahead. 😊";
 
-            return "I'm not sure about that, but you can ask me anything else about Prabhav!";
+            // --- Default Fallback ---
+            return "I'm sorry, I don't have information on that specific topic. Please try asking something else about Prabhav's data science portfolio, skills, or projects!";
         }
 
         function sendMessage() {
